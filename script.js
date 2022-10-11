@@ -1,6 +1,7 @@
 var generateBtn = $(".generateBtn");
 var clearBtn = $(".clearBtn");
 var addBtn = $(".addBtn");
+var inputIngredient = $(".inputIngredient")
 
 
 window.onload = function () {
@@ -27,26 +28,23 @@ clearBtn.on('click', function () {
     localStorage.removeItem(ingredientNumber);
 });
 
-    var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin';
+var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i= + ("inputIngredient")';
 
-    var responseText = $('#response-text');
-
-    // **NEED TO REWORK THIS to make sense for this project** function getApi(cocktailDBSearch) {
-    fetch(#placeholder)
-        .then(function (response) {
-            console.log(response.status);
-
-            if (response.status !== 200) {
-                responseText.textContent = response.status;
-            }
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        });
-    //
+var responseText = $('#response-text');
 
 
+fetch(cocktailDBSearch)
+    .then(function (response) {
+        console.log(response.status);
 
+        if (response.status !== 200) {
+            responseText.textContent = response.status;
+        }
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
 
-});
+        drinkResults.classList.add('drinkResults')
+    });
+}
