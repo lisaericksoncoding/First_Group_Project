@@ -4,7 +4,7 @@
 
 ## Usage
 
-Screen shots will go here and directions on how the site works.
+Screen shots will go [here]() and directions on how the site works.
 
 ## Credits
 
