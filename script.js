@@ -1,7 +1,7 @@
-var generateBtn = $(".generateBtn");
+var mxItBtn = $(".mxItBtn");
 var clearBtn = $(".clearBtn");
 var addBtn = $(".addBtn");
-var inputIngredient = $(".inputIngredient")
+var allIngredients = $(".allIngredients");
 
 
 window.onload = function () {
@@ -10,16 +10,39 @@ window.onload = function () {
     $('#ingr3').val(localStorage.getItem(3));
     $('#ingr4').val(localStorage.getItem(4));
 }
-generateBtn.on("click", function () {
+
+mxItBtn.on("click", function () {
 
     var ingredientNumber = $(this).siblings(".allIngredients").attr("data-ingr");
     var input = $(this).siblings(".inputIngredient").val();
 
-    localStorage.setItem(ingredientNumber, input);
+    /////STILL EDITING//////
+    for (var i = 0; i < data.input.length; i++) {
+     /////STILL EDITING//////
 
-    getApi(cocktailDBSearch);
+        var drinkResultInfo = document.createElement('div');
+        var drinkName = document.createElement('h3');
+        var drinkImage = document.createElement('img');
 
-});
+
+        drinkResultInfo.classList.add('drinkResultsInfo');
+        drinkName.classList.add('drinkName');
+        drinkImage.classList.add('drinkImage');
+
+        drinkName.innerHTML = data.drinks[i].strDrink;
+        drinkImage.src = cocktailDBSearch + data.drinks[i].strDrinkThumb;
+
+        drinkResultInfo.append(drinkName, drinkImage);
+
+        /////STILL EDITING//////
+        var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + input + "&i=" +
+         /////STILL EDITING//////
+
+            localStorage.setItem(ingredientNumber, input);
+
+        getApi(cocktailDBSearch);
+
+    });
 
 clearBtn.on('click', function () {
     var ingredientNumber = $(this).siblings("allIngredients").attr("data-ingr");
@@ -28,7 +51,6 @@ clearBtn.on('click', function () {
     localStorage.removeItem(ingredientNumber);
 });
 
-var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i= + ("inputIngredient")';
 
 var responseText = $('#response-text');
 
@@ -45,6 +67,7 @@ fetch(cocktailDBSearch)
     .then(function (data) {
         console.log(data);
 
-        drinkResults.classList.add('drinkResults')
+        var drinkResults = document.createElement('div');
+
+        drinkResults.classList.add('drinkResults');
     });
-}
