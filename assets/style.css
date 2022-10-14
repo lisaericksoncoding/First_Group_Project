@@ -3,7 +3,7 @@ screen and (max-width: 760px),
 screen and (max-width: 2000px) {
 
     .headspacing {
-        padding-bottom: 200px;
+        margin-bottom: 200px;
     }
 
     .mainspacing {
@@ -14,7 +14,7 @@ screen and (max-width: 2000px) {
     }
 
     h1 {
-        font-size: 64px;
+        font-size: 100px;
 
     }
 
@@ -23,28 +23,43 @@ screen and (max-width: 2000px) {
         text-align: center;
     }
 
-
-
-    .background-img {
-        width: 100%;
-        height: 100%;
-        margin-top: 2px;
-
+    .searchcolumn {
+        padding-top: 150px;
+        padding-left: 75px;
+        margin-right: 250px;
+    }
+    
+    .ingrcolumn {
+        padding-top: 150px;
     }
 
+    .inputstyle {
+        border: solid black 2px;
+    }
+
+    .addBtn {
+        padding: 10px;
+        margin: 20px;
+        background-color: white;
+    }
+
+    .addBtn:hover {
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+
     .mxItBtn {
-        position: relative;
-        left: 40.25rem;
-        top: 32rem;
         padding: 10px;
         color: black;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
         transform: none;
     }
 
     .mxItBtn:hover {
-        background-color: rgba(255, 255, 255, 0.884);
+        background-color:rgb(101, 219, 251);
         color: rgb(44, 43, 43);
+        cursor: url('cursor_img.png'), auto;
 
     }
 
@@ -57,7 +72,7 @@ screen and (max-width: 2000px) {
         height: 60%;
         width: 100%;
         position: fixed;
-        
+        margin-top: 50px;
 
     }
 
@@ -70,9 +85,15 @@ screen and (max-width: 2000px) {
 
     li {
         border: solid white 2px;
-        background-color:#fff;
+        background:rgba(255, 255, 255, 0.664);
         margin-bottom:20px;
+        text-align: center;
 
+    }
+
+    .bottom {
+        margin-top: 100px;
+        padding-top: 100px;
     }
 
 }
