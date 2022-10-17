@@ -1,5 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>mxr</title>
+</head>
+
+<body>
+    <!--Title and nav bar-->
+    <header class="is-flex-wrap-wrap headspacing">
+        <div class="container level">
+            <h1 class="level">mxr</h1>
+            <h2 class="has-text-centered level">A Place to Create the Perfect Cocktail!</h2>
+            <nav class="level">
+                <p class="level-item has-text-centered">
+                    <a class="navbar-item">Home</a>
+                </p>
+
+                <p class="level-item has-text-centered">
+                    <a class="navbar-item">Contact</a>
+                </p>
+            </nav>
+    </header>
+    <div class="topline"></div>
+
+    <main>
+        <!--Background image-->
+        <div class="main-bg">
+            <!--Search bar and add button, column setting-->
+            <div class="columns is-flex-wrap-wrap div">
+                <div class="column is-3 searchcolumn">
+                    <input class="input inputstyle" type="text" placeholder="What do you have?">
+                    <div class="buttons is-centered">
+                        <button class="addBtn">Add it!</button>
+                    </div>
+                </div>
+                <!--Ingredent section, second column, button to mx it-->
+                <div class="column is-2 ingrcolumn">
+                    <!--List of ingredents go here possible card needed !-->
+                    <ul class="column is-centered is-mobile">
+                        <li id="ingr1"></li>
+                        <li id="ingr2"></li>
+                        <li id="ingr3"></li>
+                        <li id="ingr4"></li>
+                    </ul>
+                    <div class="buttons is-centered">
+                        <button class="generateBtn"><a href="result.html">mx it!</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="main"></div>
+    </main>
+<!--Should be footer of page, is hidden behind background image of main section for some reason need to debug-->
+    <footer class="bottom is-flex-wrap-wrap">
+        <div class="container level">
+        <h3>Contact</h3>
+    </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>mxr</title>
+</head>
+
+<body>
+    <header class="section">
+        <div class="container, level">
+            <h1 class="">mxr</h1>
+            <h2 class="has-text-centered">A Place to Create the Perfect Cocktail!</h2>
+            <nav class="navbar-end">
+
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Contact Us
+                </a>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="section, is-full">
+g
+        <div class="background-img">
+            <img src="assets/mid_bg_cocktails_97.png">
+        </div>
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <button class="mxItBtn">mx it!</button>
+                <nav class="level">
+                        <div class="">
+                            <div class="column is-one-quarter">
+                                <p>
+                                    <input class="input" type="text" placeholder="What do you have?">
+                                </p>
+                            </div>
+                        </div>
+                </nav>
+            </div>
+    </main>
+
+    <hr>
+
+    <div id="container1">
+        <div id="row1">
+            Search for your ingredients here!
+        </div>
+
+    </div>
+
+    <button>
+
+    </button>
+
+    <footer>mxr is a non-profit organization
+        <br>
+        Drink Responsibly
+        <div class="contacts" id="contactUs">
+            Contact: GitHub Jess Lisa Quang Andrew
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,4 +216,4 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
   </body>
-</html>
+</html> -->
