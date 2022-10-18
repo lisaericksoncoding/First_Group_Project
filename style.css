@@ -73,7 +73,7 @@ screen and (max-width: 3000px) {
     .generateBtn:hover {
         background-color: rgb(101, 219, 251);
         color: rgb(44, 43, 43);
-        cursor: url('cursor_img.png'), auto;
+        cursor: url('images/cursor_img.png'), auto;
 
     }
 
@@ -100,8 +100,7 @@ screen and (max-width: 3000px) {
     }
 
     .contacts {
-        text-align: 25%;
-        font-size: 24px;
+        font-size: 30px;
     }
 
     li {
@@ -115,6 +114,12 @@ screen and (max-width: 3000px) {
     .bottom {
         margin-top: 10px;
         padding-top: 20px;
+    }
+
+    .Thirsty {
+        font-family: sans-serif;
+        padding-top: 5%;
+        font-size: 20px;
     }
 
 }
