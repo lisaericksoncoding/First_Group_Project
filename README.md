@@ -13,7 +13,9 @@ IF I don't have the ingredients THEN the application reccomends nearby stores to
 
 
 ## Acceptance Criteria
-
+GIVEN I am using a database to search for cocktails using ingrdients that I have WHEN I type in ingredients THEN
+ingredients will become visible on the page WHEN I click the 'x' next to the added ingredients THEN the 
+chosen ingredient will depopulate WHEN I select 'mx it!' a web page will open with a a cocktail displaying made with chosen ingredients.
 
 
 ## APIs
