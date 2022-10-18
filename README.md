@@ -18,6 +18,7 @@ IF I don't have the ingredients THEN the application reccomends nearby stores to
 
 ## APIs
 [Bulma](https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css)
+<br />
 Cocktail Database: www.thecocktaildb.com/api/json/v1/1/filter.php?i=
 
 
