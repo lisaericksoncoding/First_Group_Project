@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css" />
     <title>mxr</title>
 </head>
-<body>
-    <header class="section">
-        <h1>mxr</h1>
-        <nav class="navbar-end">Home Contact</nav>
-    </header>
-    <section class="section, is-full">
-        <div class="bgimg">
-            <img src="assets/mid_bg_cocktails_97.png">
 
+<body>
+    <!--Title and nav bar-->
+    <header class="is-flex-wrap-wrap headspacing">
+        <div class="container level">
+            <h1 class="level">mxr</h1>
+            <h2 class="has-text-centered level">A Place to Create the Perfect Cocktail!</h2>
+            <nav class="level">
+                <p class="level-item has-text-centered">
+                    <a class="navbar-item">Home</a>
+                </p>
+
+                <p class="level-item has-text-centered">
+                    <a class="navbar-item">Contact</a>
+                </p>
+            </nav>
+    </header>
+    <div class="topline"></div>
+
+    <main>
+        <!--Background image-->
+        <div class="main-bg">
+            <!--Search bar and add button, column setting-->
+            <div class="columns is-flex-wrap-wrap div">
+                <div class="column is-3 searchcolumn">
+                    <!--Start of form-->
+                    <form id="ingr-form">
+                        <input type="text" class="input inputstyle" id="ingrInput" name="ingrInput"
+                            placeholder="What do you have?">
+                        <div class="buttons is-centered">
+                            <button class="addBtn">Add it!</button>
+                        </div>
+                    </form>
+                </div>
+                <!--Ingredent section, second column, button to mx it-->
+                <div class="column is-2 ingrcolumn">
+                    <!--List of ingredents go here!-->
+                    <ul class="column is-centered is-mobile ingrUl" id="ingUl">
+
+                    </ul>
+                    <div class="buttons is-centered">
+                        <button class="generateBtn">mx it!</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    
+        <div class="main"></div>
+    </main>
+    <!--Footer of page for contact info-->
+    <footer class="bottom is-flex-wrap-wrap">
+        <div class="container level">
+            <h3>Contact</h3>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+
+
 </body>
+
+
+
 </html>
