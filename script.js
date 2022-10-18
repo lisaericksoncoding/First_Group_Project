@@ -1,7 +1,29 @@
 var generateBtn = $(".generateBtn");
-var clearBtn = $(".clearBtn");
+//var clearBtn = $('.clearBtn');
 var addBtn = $(".addBtn");
 var inputIngredient = $(".inputIngredient")
+var ingrForm = $('#ingr-form')
+var ingUl = $('#ingUl')
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    var ingrItem = $('input[name="ingrInput"]').val();
+
+    if (!ingrItem) {
+        console.log('no ingredient item entered.');
+        return;
+    }
+
+    ingUl.append('<li id="ingredient">' + ingrItem + '<button class="clearBtn">' + "X" + '</button>' + '</li>');
+
+    $('input[name="ingrInput"]').val('')
+}
+
+ingrForm.on('submit', handleFormSubmit);
+ingUl.on('click', '.clearBtn', function(){
+    $(this).parent().remove();
+})
 
 
 window.onload = function () {
@@ -21,30 +43,29 @@ generateBtn.on("click", function () {
 
 });
 
-clearBtn.on('click', function () {
-    var ingredientNumber = $(this).siblings("allIngredients").attr("data-ingr");
-    $(this).siblings(".inputIngredient").val("");
+// clearBtn.on('click', function () {
+//     var ingredientNumber = $(this).siblings("allIngredients").attr("data-ingr");
+//     $(this).siblings(".inputIngredient").val("");
 
-    localStorage.removeItem(ingredientNumber);
-});
+//     localStorage.removeItem(ingredientNumber);
+// });
 
-var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i= + ("inputIngredient")';
+// var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i= + ("inputIngredient")';
 
-var responseText = $('#response-text');
+// var responseText = $('#response-text');
 
 
-fetch(cocktailDBSearch)
-    .then(function (response) {
-        console.log(response.status);
+//fetch(cocktailDBSearch)
+//     .then(function (response) {
+//         console.log(response.status);
 
-        if (response.status !== 200) {
-            responseText.textContent = response.status;
-        }
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
+//         if (response.status !== 200) {
+//             responseText.textContent = response.status;
+//         }
+//         return response.json();
+//     })
+//     .then(function (data) {
+//         console.log(data);
 
-        drinkResults.classList.add('drinkResults')
-    });
-}
+//         drinkResults.classList.add('drinkResults')
+//     });
