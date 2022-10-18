@@ -39,8 +39,6 @@ function handleFormSubmit(event) {
 
 window.onload = function () {
     $('ingri').val(localStorage.getItem());
-    
-
 
 }
 
