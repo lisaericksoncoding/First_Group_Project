@@ -120,6 +120,7 @@ screen and (max-width: 3000px) {
         font-family: sans-serif;
         padding-top: 5%;
         font-size: 20px;
+        font-weight: 600;
     }
 
 }
