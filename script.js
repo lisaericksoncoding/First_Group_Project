@@ -1,9 +1,8 @@
 var generateBtn = $(".generateBtn");
-//var clearBtn = $('.clearBtn');
 var addBtn = $(".addBtn");
-var inputIngredient = $(".inputIngredient")
 var ingrForm = $('#ingr-form')
 var ingUl = $('#ingUl')
+var ingrItem = $('input[name="ingrInput"]').val();
 
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -15,33 +14,45 @@ function handleFormSubmit(event) {
         return;
     }
 
-    ingUl.append('<li id="ingredient">' + ingrItem + '<button class="clearBtn">' + "X" + '</button>' + '</li>');
+    ingUl.append('<li>' + ingrItem + '<button class="clearBtn">' + "X" + '</button>' + '</li>');
 
     $('input[name="ingrInput"]').val('')
+
+    //$().ready(function () {
+
+    $(".ingrUl li").each(function (n) {
+        $(this).attr("id", "ingr" + n);
+        console.log(ingrItem)
+
+
+    });
+    // var ingrNumber = $(this).(".ingrUl").attr("data-ingr");
+    // var input = $(this).sibling(".input").val();
+    // localStorage.setItem(ingrNumber, input);
+    localStorage.setItem('ingrInput', ingrItem);
+
+
 }
 
+
+
+
+
+// //window.onload = function () {
+//     $('ingri').val(localStorage.getItem());
+
+// //}
+
+
+
 ingrForm.on('submit', handleFormSubmit);
-ingUl.on('click', '.clearBtn', function(){
+ingUl.on('click', '.clearBtn', function () {
     $(this).parent().remove();
 })
 
 
-window.onload = function () {
-    $('#ingr1').val(localStorage.getItem(1));
-    $('#ingr2').val(localStorage.getItem(2));
-    $('#ingr3').val(localStorage.getItem(3));
-    $('#ingr4').val(localStorage.getItem(4));
-}
-generateBtn.on("click", function () {
 
-    var ingredientNumber = $(this).siblings(".allIngredients").attr("data-ingr");
-    var input = $(this).siblings(".inputIngredient").val();
 
-    localStorage.setItem(ingredientNumber, input);
-
-    getApi(cocktailDBSearch);
-
-});
 
 // clearBtn.on('click', function () {
 //     var ingredientNumber = $(this).siblings("allIngredients").attr("data-ingr");
@@ -50,22 +61,41 @@ generateBtn.on("click", function () {
 //     localStorage.removeItem(ingredientNumber);
 // });
 
-// var cocktailDBSearch = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i= + ("inputIngredient")';
+var cocktailDBSearch = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + ingrItem;
 
-// var responseText = $('#response-text');
+var responseText = $('#response-text');
 
+generateBtn.on("click", function () {
 
-//fetch(cocktailDBSearch)
-//     .then(function (response) {
-//         console.log(response.status);
+    var ingredientNumber = $(this).siblings(".allIngredients").attr("data-ingr");
+    var input = $(this).siblings(".inputIngredient").val();
 
-//         if (response.status !== 200) {
-//             responseText.textContent = response.status;
-//         }
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         console.log(data);
+    localStorage.setItem(ingredientNumber, input);
 
-//         drinkResults.classList.add('drinkResults')
-//     });
+    var drinkResultInfo = document.createElement('div');
+    var drinkName = document.createElement('h3');
+    var drinkImage = document.createElement('img');
+    drinkResultInfo.classList.add('drinkResultsInfo');
+    drinkName.classList.add('drinkName');
+    drinkImage.classList.add('drinkImage');
+    drinkName.innerHTML = data.drinks[i].strDrink;
+    drinkImage.src = cocktailDBSearch + data.drinks[i].strDrinkThumb;
+    drinkResultInfo.append(drinkName, drinkImage);
+    
+    getApi(cocktailDBSearch);
+
+});
+fetch(cocktailDBSearch)
+    .then(function (response) {
+        //console.log(response.status);
+
+        //if (response.status !== 200) {
+           // responseText.textContent = response.status;
+       // }
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+
+        drinkResults.classList.add('drinkResults')
+    });
