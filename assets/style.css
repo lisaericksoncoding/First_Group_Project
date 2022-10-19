@@ -1,0 +1,124 @@
+@media only screen and (max-width: 450px),
+screen and (max-width: 760px),
+screen and (max-width: 2000px) {
+
+    .headspacing {
+        margin-bottom: -10px;
+    }
+
+    .mainspacing {
+        margin-top: 50px;
+        padding-top: 1px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 100px;
+
+    }
+
+    h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .topline {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        border-bottom: solid black 2px;
+    }
+
+    .main {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-bottom: 40px;
+        border-bottom: solid black 2px;
+    }
+
+    .searchcolumn {
+        padding-top: 15px;
+        padding-left: 75px;
+        margin-right: 250px;
+    }
+
+    .ingrcolumn {
+        padding-top: 15px;
+    }
+
+    .inputstyle {
+        border: solid black 2px;
+    }
+
+    .addBtn {
+        padding: 10px;
+        margin: 20px;
+        background-color: white;
+    }
+
+    .addBtn:hover {
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+    .clearBtn {
+        float:right;
+    }
+
+    .generateBtn {
+        padding: 10px;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transform: none;
+        
+    }
+
+    .generateBtn:hover {
+        background-color: rgb(101, 219, 251);
+        color: rgb(44, 43, 43);
+        cursor: url('cursor_img.png'), auto;
+
+    }
+
+
+    .main-bg {
+        background-image: url(mid_bg_cocktails_97.png);
+        background-size: cover;
+        background-position: center center;
+        top: 10px;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding-bottom: 150px;
+        padding-top: 150px;
+
+    }
+
+    .div {
+        padding-top: 100px;
+    }
+
+    .divline {
+        border-bottom: solid black 2px;
+    }
+
+    .contacts {
+        text-align: 25%;
+        font-size: 24px;
+    }
+
+    li {
+        border: solid white 2px;
+        background: rgba(255, 255, 255, 0.664);
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+
+    .bottom {
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+}

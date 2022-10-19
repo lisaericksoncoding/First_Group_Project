@@ -36,4 +36,3 @@ https://lisaericksoncoding.github.io/mxr/
 ## Credits
 
 Huge thanks to all collaborators: [Lisa](https://github.com/lisaericksoncoding), [Andrew](https://github.com/asimmons03"), [Kyle](https://github.com/coffeeprynce), and [Jess](https://github.com/jgporter24").
-List attributes of third-party assets here
