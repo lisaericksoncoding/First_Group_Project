@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+!DOCTYPE html>
+=======
 <html lang="en">
 
 <head>
@@ -14,15 +16,18 @@
     <!--Title and nav bar-->
     <header class="is-flex-wrap-wrap headspacing">
         <div class="container level">
-            <h1 class="level">mxr</h1>
+
+            <h1 class="level" id="home">mxr</h1>
             <h2 class="has-text-centered level">A Place to Create the Perfect Cocktail!</h2>
             <nav class="level">
                 <p class="level-item has-text-centered">
-                    <a class="navbar-item">Home</a>
+                    <a class="navbar-item" href="#home" >Home</a>
                 </p>
 
                 <p class="level-item has-text-centered">
-                    <a class="navbar-item">Contact</a>
+                    <a class="navbar-item" href="#contactUs">Contact</a>
+
+
                 </p>
             </nav>
     </header>
@@ -34,7 +39,7 @@
             <!--Search bar and add button, column setting-->
             <div class="columns is-flex-wrap-wrap div">
                 <div class="column is-3 searchcolumn">
-                    <!--Start of form-->
+
                     <form id="ingr-form">
                         <input type="text" class="input inputstyle" id="ingrInput" name="ingrInput"
                             placeholder="What do you have?">
@@ -46,22 +51,33 @@
                 <!--Ingredent section, second column, button to mx it-->
                 <div class="column is-2 ingrcolumn">
                     <!--List of ingredents go here!-->
-                    <ul class="column is-centered is-mobile ingrUl" id="ingUl">
+
+                    <ul class="column is-centered is-mobile" id="ingUl">
 
                     </ul>
                     <div class="buttons is-centered">
-                        <button class="generateBtn">mx it!</button>
+                        <button class="generateBtn" href="results.html">mx it!</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="main"></div>
     </main>
-    <!--Footer of page for contact info-->
-    <footer class="bottom is-flex-wrap-wrap">
-        <div class="container level">
-            <h3>Contact</h3>
-        </div>
+
+ <!--Should be footer of page, is hidden behind background image of main section for some reason need to debug-->
+ <footer class="bottom is-flex-wrap-wrap">
+    <div class="container level">
+    <h3 style="font-size: 45px;">Contact</h3>
+    <div class="contacts" id="contactUs">
+        <a href="https://github.com/jgporter24">Jess &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a> 
+        <a href="https://github.com/lisaericksoncoding">Lisa &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a> 
+        <a href="https://github.com/coffeeprynce">Kyle &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <a href="https://github.com/asimmons03">Andrew</a> 
+    </div>  
+    <br>
+    <br>
+    <div class="Thirsty">Stay Thirsty!</div>
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -70,6 +86,5 @@
 
 </body>
 
-
-
 </html>
+
