@@ -77,13 +77,13 @@ screen and (max-width: 2000px) {
     .generateBtn:hover {
         background-color: rgb(101, 219, 251);
         color: rgb(44, 43, 43);
-        cursor: url('cursor_img.png'), auto;
+        cursor: url('images/cursor_img.png'), auto;
 
     }
 
 
     .main-bg {
-        background-image: url(mid_bg_cocktails_97.png);
+        background-image: url(images/mid_bg_cocktails_97.png);
         background-size: cover;
         background-position: center center;
         top: 10px;
