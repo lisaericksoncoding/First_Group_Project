@@ -31,8 +31,8 @@ https://lisaericksoncoding.github.io/mxr/
 
 ## Usage
 
-Screen shots will go [here]() and directions on how the site works.
-
+![screenshot1](https://user-images.githubusercontent.com/111012288/196567492-aab5f3ef-00ea-4ff8-919d-c3f9df20cbea.jpg)
+ 
 ## Credits
 
 Huge thanks to all collaborators: [Lisa](https://github.com/lisaericksoncoding), [Andrew](https://github.com/asimmons03"), [Kyle](https://github.com/coffeeprynce), and [Jess](https://github.com/jgporter24").
